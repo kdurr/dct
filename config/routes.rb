@@ -3,7 +3,12 @@ Dct::Application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  # root 'welcome#index'
+  root 'welcome#index'
+
+  match "/services" => "welcome#services", :via => [:get]
+  match "/about" => "welcome#about", :via => [:get]
+  match "/faq" => "welcome#faq", :via => [:get]
+  match "/contact" => "welcome#contact", :via => [:get]
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
